@@ -10,14 +10,36 @@ import {
 import { IconArrowDown, IconArrowRight, IconLayout2Filled } from "@tabler/icons-react";
 import MyImg from "../img/foto.png";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { motion } from "framer-motion"
 const WelcomePage = ({ }) => {
 	return (
 		<div>
 			{/* Halaman bagian page atas */}
-			{/* ariants={{hidden:{opacity:0},show:{opacity:1}}} */}
 			<div className="bg-slate-50 md:h-screen w-full">
-				<div className="flex flex-col md:flex-row p-4 md:p-16 gap-6">
-					<div className="w-full md:w-8/12">
+				<motion.div
+					initial="hidden"
+					animate="show"
+					variants={{
+						hidden: { opacity: 0 },
+						show: {
+							opacity: 1,
+							transition: {
+								staggerChildren: 0.3,  // Mengatur elemen muncul bergantian setiap 0.3 detik
+								delayChildren: 0.2,    // Jeda sebelum elemen pertama muncul
+								duration: 0.3,
+							}
+						}
+					}}
+					className="flex flex-col md:flex-row p-4 md:p-16 gap-6"
+				>
+					{/* Animasi untuk elemen pertama */}
+					<motion.div
+						variants={{
+							hidden: { opacity: 0, y: 50 }, // Awal elemen berada di bawah
+							show: { opacity: 1, y: 0 }     // Saat muncul, elemen naik ke posisi normal
+						}}
+						className="w-full md:w-8/12"
+					>
 						<Card className="rounded-xl border border-pink-200 shadow-none p-4 md:p-10" style={{ background: "#FEF3F9" }}>
 							<CardContent>
 								<CardTitle>
@@ -34,8 +56,9 @@ const WelcomePage = ({ }) => {
 							</CardContent>
 						</Card>
 
+						{/* Elemen berikutnya */}
 						<div className="flex flex-col md:flex-row gap-6 mt-6">
-							<div className="w-full md:w-6/12">
+							<motion.div variants={{ hidden: { opacity: 0, y: 50 }, show: { opacity: 1, y: 0 } }} className="w-full md:w-6/12">
 								<Card className="rounded-xl border-pink-200 shadow-none p-4 md:p-10" style={{ background: "#FEF3F9" }}>
 									<CardTitle>
 										<div className="flex gap-5">
@@ -49,9 +72,9 @@ const WelcomePage = ({ }) => {
 										</div>
 									</CardTitle>
 								</Card>
-							</div>
+							</motion.div>
 
-							<div className="w-full md:w-6/12">
+							<motion.div variants={{ hidden: { opacity: 0, y: 50 }, show: { opacity: 1, y: 0 } }} className="w-full md:w-6/12">
 								<Card className="rounded-xl border border-pink-200 shadow-none  p-4 md:p-10" style={{ background: "#FEF4F9" }}>
 									<CardTitle>
 										<div className="flex gap-5">
@@ -65,11 +88,15 @@ const WelcomePage = ({ }) => {
 										</div>
 									</CardTitle>
 								</Card>
-							</div>
+							</motion.div>
 						</div>
-					</div>
+					</motion.div>
 
-					<div className="w-full md:w-4/12">
+					{/* Elemen Carousel di sebelah kanan */}
+					<motion.div
+						variants={{ hidden: { opacity: 0, y: 50 }, show: { opacity: 1, y: 0 } }}
+						className="w-full md:w-4/12"
+					>
 						<Card className="rounded-xl border border-pink-500 p-5 h-[550px] flex flex-col justify-between items-center" style={{ background: "#EB578B" }}>
 							<CardTitle>
 								<Carousel className="w-full h-auto mx-10">
@@ -90,12 +117,10 @@ const WelcomePage = ({ }) => {
 								Lihat Detail <IconArrowRight size={18} />
 							</Button>
 						</Card>
-					</div>
-				</div>
+					</motion.div>
+				</motion.div>
 
 
-
-				{/* Bagian Template */}
 			</div>
 
 			{/* bagian template */}
