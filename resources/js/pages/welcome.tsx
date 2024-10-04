@@ -45,10 +45,10 @@ const WelcomePage = ({ }) => {
 							<Card className="rounded-xl border border-pink-200 shadow-none p-4 md:p-10" style={{ background: "#EFC3AF" }}>
 								<CardContent>
 									<CardTitle>
-										<p className="text-4xl md:text-6xl font-bold" style={{ color: "#E91C8A", maxWidth: "500px" }}>
+										<p className="text-4xl md:text-6xl font-bold " style={{ color: "#6C4E31", maxWidth: "500px" }}>
 											Template Design Undangan
 										</p>
-										<p className="text-sm mt-4 text-gray-600">
+										<p className="text-sm mt-4 " style={{color: "#B99470"}}>
 											Temukan keindahan desain undangan pernikahan impianmu.
 										</p>
 									</CardTitle>
@@ -76,8 +76,8 @@ const WelcomePage = ({ }) => {
 												<IconLayout2Filled />
 											</div>
 											<div>
-												<p className="text-xl md:text-3xl  text-zinc-600" style={{color: "#E91C8A"}}>Edit Sesukamu</p>
-												<p className="text-zinc-400">Unlimited Revisi</p>
+												<p className="text-xl md:text-3xl  text-zinc-600" style={{color: "#B99470"}}>Edit Sesukamu</p>
+												<p className="text-zinc-400" style={{color: "#B99470"}}>Unlimited Revisi</p>
 											</div>
 										</div>
 									</CardTitle>
@@ -97,8 +97,8 @@ const WelcomePage = ({ }) => {
 												<IconLayout2Filled />
 											</div>
 											<div>
-												<p className="text-xl md:text-3xl text-zinc-600" style={{color: "#E91C8A"}}>100+</p>
-												<p className="text-zinc-400">Tema Undangan</p>
+												<p className="text-xl md:text-3xl text-zinc-600" style={{color: "#B99470"}}>100+</p>
+												<p className="text-zinc-400" style={{color: "#B99470"}}>Tema Undangan</p>
 											</div>
 										</div>
 									</CardTitle>
@@ -276,7 +276,7 @@ const WelcomePage = ({ }) => {
 				<div className='grid grid-cols-1 md:grid-cols-2 p-8 md:p-16'>
 					<div className='flex flex-col h-full'>
 						<div className='flex-grow border-r-0 md:border-r-2 h-full border-pink-500'>
-							<p className='text-lg md:text-xl font-semibold text-pink-500'>Viding</p>
+							<p className='text-lg md:text-xl font-semibold'>Viding</p>
 							<p className='mt-3 text-sm md:text-base text-zinc-500'>
 								Viding adalah One Stop Platform Digitalisasi Pernikahan yang membuat pernikahan kamu menjadi lebih efisien, efektif, bermakna, dan Up to Date.
 							</p>
