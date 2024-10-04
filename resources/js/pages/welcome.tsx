@@ -24,8 +24,8 @@ const WelcomePage = ({ }) => {
 						show: {
 							opacity: 1,
 							transition: {
-								staggerChildren: 0.3,  // Mengatur elemen muncul bergantian setiap 0.3 detik
-								delayChildren: 0.2,    // Jeda sebelum elemen pertama muncul
+								staggerChildren: 0.3, 
+								delayChildren: 0.2,   
 								duration: 0.3,
 							}
 						}
@@ -33,13 +33,15 @@ const WelcomePage = ({ }) => {
 					className="flex flex-col md:flex-row p-4 md:p-16 gap-6"
 				>
 					{/* Animasi untuk elemen pertama */}
-					<motion.div
-						variants={{
-							hidden: { opacity: 0, y: 50 }, // Awal elemen berada di bawah
-							show: { opacity: 1, y: 0 }     // Saat muncul, elemen naik ke posisi normal
-						}}
+					<div
+						
 						className="w-full md:w-8/12"
 					>
+						<motion.div variants={{
+							hidden: { opacity: 0, y: 50 },
+							show: { opacity: 1, y: 0 }  
+						}}>
+
 						<Card className="rounded-xl border border-pink-200 shadow-none p-4 md:p-10" style={{ background: "#FEF3F9" }}>
 							<CardContent>
 								<CardTitle>
@@ -55,10 +57,18 @@ const WelcomePage = ({ }) => {
 								</Button>
 							</CardContent>
 						</Card>
+						</motion.div>
 
 						{/* Elemen berikutnya */}
 						<div className="flex flex-col md:flex-row gap-6 mt-6">
-							<motion.div variants={{ hidden: { opacity: 0, y: 50 }, show: { opacity: 1, y: 0 } }} className="w-full md:w-6/12">
+							{/* Elemen "Edit Sesukamu" */}
+							<motion.div
+							variants={{
+								hidden: { opacity: 0, y: 50 },
+								show: { opacity: 1, y: 0 }  
+							}}
+								className="w-full md:w-6/12"
+							>
 								<Card className="rounded-xl border-pink-200 shadow-none p-4 md:p-10" style={{ background: "#FEF3F9" }}>
 									<CardTitle>
 										<div className="flex gap-5">
@@ -74,7 +84,12 @@ const WelcomePage = ({ }) => {
 								</Card>
 							</motion.div>
 
-							<motion.div variants={{ hidden: { opacity: 0, y: 50 }, show: { opacity: 1, y: 0 } }} className="w-full md:w-6/12">
+							{/* Elemen "100+ Tema Undangan" */}
+							<motion.div
+								variants={{ hidden: { opacity: 0, y: 50 }, show: { opacity: 1, y: 0 } }}
+								transition={{ duration: 0.5 }} // Transisi sedikit lebih lambat
+								className="w-full md:w-6/12"
+							>
 								<Card className="rounded-xl border border-pink-200 shadow-none  p-4 md:p-10" style={{ background: "#FEF4F9" }}>
 									<CardTitle>
 										<div className="flex gap-5">
@@ -90,7 +105,7 @@ const WelcomePage = ({ }) => {
 								</Card>
 							</motion.div>
 						</div>
-					</motion.div>
+					</div>
 
 					{/* Elemen Carousel di sebelah kanan */}
 					<motion.div
@@ -119,7 +134,6 @@ const WelcomePage = ({ }) => {
 						</Card>
 					</motion.div>
 				</motion.div>
-
 
 			</div>
 
