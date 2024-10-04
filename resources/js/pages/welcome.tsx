@@ -42,7 +42,7 @@ const WelcomePage = ({ }) => {
 							show: { opacity: 1, y: 0 }
 						}}>
 
-							<Card className="rounded-xl border border-pink-200 shadow-none p-4 md:p-10" style={{ background: "#FEF3F9" }}>
+							<Card className="rounded-xl border border-pink-200 shadow-none p-4 md:p-10" style={{ background: "#EFC3AF" }}>
 								<CardContent>
 									<CardTitle>
 										<p className="text-4xl md:text-6xl font-bold" style={{ color: "#E91C8A", maxWidth: "500px" }}>
@@ -69,14 +69,14 @@ const WelcomePage = ({ }) => {
 								}}
 								className="w-full md:w-6/12"
 							>
-								<Card className="rounded-xl border-pink-200 shadow-none p-4 md:p-10" style={{ background: "#FEF3F9" }}>
+								<Card className="rounded-xl border-pink-200 shadow-none p-4 md:p-10" style={{ background: "#EFC3AF" }}>
 									<CardTitle>
 										<div className="flex gap-5">
 											<div className="bg-white p-3 rounded-xl items-center">
 												<IconLayout2Filled />
 											</div>
 											<div>
-												<p className="text-xl md:text-3xl  text-zinc-600">Edit Sesukamu</p>
+												<p className="text-xl md:text-3xl  text-zinc-600" style={{color: "#E91C8A"}}>Edit Sesukamu</p>
 												<p className="text-zinc-400">Unlimited Revisi</p>
 											</div>
 										</div>
@@ -90,14 +90,14 @@ const WelcomePage = ({ }) => {
 								transition={{ duration: 0.5 }} // Transisi sedikit lebih lambat
 								className="w-full md:w-6/12"
 							>
-								<Card className="rounded-xl border border-pink-200 shadow-none  p-4 md:p-10" style={{ background: "#FEF4F9" }}>
+								<Card className="rounded-xl border border-pink-200 shadow-none  p-4 md:p-10" style={{ background: "#EFC3AF" }}>
 									<CardTitle>
 										<div className="flex gap-5">
 											<div className="bg-white p-3 rounded-xl items-center">
 												<IconLayout2Filled />
 											</div>
 											<div>
-												<p className="text-xl md:text-3xl text-zinc-600">100+</p>
+												<p className="text-xl md:text-3xl text-zinc-600" style={{color: "#E91C8A"}}>100+</p>
 												<p className="text-zinc-400">Tema Undangan</p>
 											</div>
 										</div>
@@ -112,7 +112,7 @@ const WelcomePage = ({ }) => {
 						variants={{ hidden: { opacity: 0, y: 50 }, show: { opacity: 1, y: 0 } }}
 						className="w-full md:w-4/12"
 					>
-						<Card className="rounded-xl border border-pink-500 p-5 h-[550px] flex flex-col justify-between items-center" style={{ background: "#EB578B" }}>
+						<Card className="rounded-xl border border-pink-300 p-5 h-[550px] flex flex-col justify-between items-center" style={{ background: "#EFC3AF" }}>
 							<CardTitle>
 								<Carousel className="w-full h-auto mx-10">
 									<CarouselContent className="flex justify-center">
@@ -182,8 +182,6 @@ const WelcomePage = ({ }) => {
 					</div>
 				</div>
 
-
-
 				<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mt-10">
 					<div >
 						<Card className='rounded-xl'>
@@ -199,7 +197,7 @@ const WelcomePage = ({ }) => {
 						</div>
 						<Button
 							className="rounded-full w-full mt-3 text-white flex gap-2"
-							style={{ background: "#EB578B" }}
+							style={{ background: "#EB577B" }}
 						>
 							Lihat Template
 						</Button>
@@ -218,7 +216,7 @@ const WelcomePage = ({ }) => {
 						</div>
 						<Button
 							className="rounded-full w-full mt-3 text-white flex gap-2"
-							style={{ background: "#EB578B" }}
+							style={{ background: "#EB577B" }}
 						>
 							Lihat Template
 						</Button>
@@ -238,7 +236,7 @@ const WelcomePage = ({ }) => {
 						</div>
 						<Button
 							className="rounded-full w-full mt-3 text-white flex gap-2"
-							style={{ background: "#EB578B" }}
+							style={{ background: "#EB577B" }}
 						>
 							Lihat Template
 						</Button>
@@ -256,7 +254,7 @@ const WelcomePage = ({ }) => {
 						</div>
 						<Button
 							className="rounded-full w-full mt-3 text-white flex gap-2"
-							style={{ background: "#EB578B" }}
+							style={{ background: "#EB577B" }}
 						>
 							Lihat Template
 						</Button>
@@ -273,7 +271,7 @@ const WelcomePage = ({ }) => {
 			</div>
 
 			{/* Footer */}
-			<div className='bg-pink-100'>
+			<div style={{ background: "#EFC3AF" }}>
 				{/* Section pertama */}
 				<div className='grid grid-cols-1 md:grid-cols-2 p-8 md:p-16'>
 					<div className='flex flex-col h-full'>

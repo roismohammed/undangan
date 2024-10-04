@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <Fragment>
     <header className=''>
-        <nav className="bg-white px-4 lg:px-6 py-4 dark:bg-gray-800">
+        <nav style={{background: "#EFC3AF"}} className=" px-4 lg:px-6 py-4 dark:bg-gray-800">
             <div className="flex justify-between items-center mx-auto ">
                 <a
                     href="https://flowbite.com"
