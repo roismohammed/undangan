@@ -24,8 +24,8 @@ const WelcomePage = ({ }) => {
 						show: {
 							opacity: 1,
 							transition: {
-								staggerChildren: 0.3, 
-								delayChildren: 0.2,   
+								staggerChildren: 0.3,
+								delayChildren: 0.2,
 								duration: 0.3,
 							}
 						}
@@ -34,39 +34,39 @@ const WelcomePage = ({ }) => {
 				>
 					{/* Animasi untuk elemen pertama */}
 					<div
-						
+
 						className="w-full md:w-8/12"
 					>
 						<motion.div variants={{
 							hidden: { opacity: 0, y: 50 },
-							show: { opacity: 1, y: 0 }  
+							show: { opacity: 1, y: 0 }
 						}}>
 
-						<Card className="rounded-xl border border-pink-200 shadow-none p-4 md:p-10" style={{ background: "#FEF3F9" }}>
-							<CardContent>
-								<CardTitle>
-									<p className="text-4xl md:text-6xl font-bold" style={{ color: "#E91C8A", maxWidth: "500px" }}>
-										Template Design Undangan
-									</p>
-									<p className="text-sm mt-4 text-gray-600">
-										Temukan keindahan desain undangan pernikahan impianmu.
-									</p>
-								</CardTitle>
-								<Button className="rounded-full mt-4 md:mt-24 text-white flex gap-2" style={{ background: "#EB578B" }}>
-									Jelajahi Template <IconArrowDown size={18} />
-								</Button>
-							</CardContent>
-						</Card>
+							<Card className="rounded-xl border border-pink-200 shadow-none p-4 md:p-10" style={{ background: "#FEF3F9" }}>
+								<CardContent>
+									<CardTitle>
+										<p className="text-4xl md:text-6xl font-bold" style={{ color: "#E91C8A", maxWidth: "500px" }}>
+											Template Design Undangan
+										</p>
+										<p className="text-sm mt-4 text-gray-600">
+											Temukan keindahan desain undangan pernikahan impianmu.
+										</p>
+									</CardTitle>
+									<Button className="rounded-full mt-4 md:mt-24 text-white flex gap-2" style={{ background: "#EB578B" }}>
+										Jelajahi Template <IconArrowDown size={18} />
+									</Button>
+								</CardContent>
+							</Card>
 						</motion.div>
 
 						{/* Elemen berikutnya */}
 						<div className="flex flex-col md:flex-row gap-6 mt-6">
 							{/* Elemen "Edit Sesukamu" */}
 							<motion.div
-							variants={{
-								hidden: { opacity: 0, y: 50 },
-								show: { opacity: 1, y: 0 }  
-							}}
+								variants={{
+									hidden: { opacity: 0, y: 50 },
+									show: { opacity: 1, y: 0 }
+								}}
 								className="w-full md:w-6/12"
 							>
 								<Card className="rounded-xl border-pink-200 shadow-none p-4 md:p-10" style={{ background: "#FEF3F9" }}>
@@ -137,7 +137,7 @@ const WelcomePage = ({ }) => {
 
 			</div>
 
-			{/* bagian template */}
+			{/* bagian card template */}
 			<div className='md:p-16 p-4 '>
 				<div className="flex flex-col md:flex-row justify-between gap-6">
 					<div className="flex gap-4">
@@ -274,69 +274,67 @@ const WelcomePage = ({ }) => {
 
 			{/* Footer */}
 			<div className='bg-pink-100'>
-				<div className='grid grid-cols-2 p-16'>
+				{/* Section pertama */}
+				<div className='grid grid-cols-1 md:grid-cols-2 p-8 md:p-16'>
 					<div className='flex flex-col h-full'>
-						<div className='flex-grow border-r-2 h- border-pink-500'>
-							<p className='text-xl font-semibold text-pink-500'>Viding</p>
-							<p className='mt-3 text-zinc-500'>
+						<div className='flex-grow border-r-0 md:border-r-2 h-full border-pink-500'>
+							<p className='text-lg md:text-xl font-semibold text-pink-500'>Viding</p>
+							<p className='mt-3 text-sm md:text-base text-zinc-500'>
 								Viding adalah One Stop Platform Digitalisasi Pernikahan yang membuat pernikahan kamu menjadi lebih efisien, efektif, bermakna, dan Up to Date.
 							</p>
-							<p className='mt-3 text-zinc-400'>
+							<p className='mt-3 text-sm md:text-base text-zinc-400'>
 								Terdaftar di Kementerian Komunikasi dan Informatika Republik Indonesia
 							</p>
 						</div>
 					</div>
 
-
-
-					<div className='px-12'>
-						<p className='text-xl font-semibold text-pink-500'>Metode Pembayaran</p>
+					<div className='mt-6 md:mt-0 px-8 md:px-12'>
+						<p className='text-lg md:text-xl font-semibold text-pink-500'>Metode Pembayaran</p>
 					</div>
 				</div>
 
-				<div className='grid grid-cols-4 p-16'>
+				{/* Section kedua */}
+				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-8 md:p-16'>
 					<div className='flex flex-col h-full'>
-						<div className='flex-grow border-r-2 h- border-pink-500'>
-							<p className='text-xl text-pink-500'>Prdoct</p>
-							<p className='mt-3 text-zinc-500'>
-
+						<div className='flex-grow border-r-0 lg:border-r-2 h-full border-pink-500'>
+							<p className='text-lg md:text-xl text-pink-500'>Produk</p>
+							<p className='mt-3 text-sm md:text-base text-zinc-500'>
+								{/* Konten Produk */}
 							</p>
-
 						</div>
 					</div>
 
-					<div className='flex flex-col h-full border-t '>
-						<div className='flex-grow px-7 border-r-2  border-pink-500'>
-							<p className='text-xl  text-pink-500'>Bantuan</p>
-							<p className='mt-3 text-zinc-500'>
-
+					<div className='mt-6 md:mt-0 flex flex-col h-full border-t md:border-t-0'>
+						<div className='flex-grow px-0 md:px-7 border-r-0 lg:border-r-2 border-pink-500'>
+							<p className='text-lg md:text-xl text-pink-500'>Bantuan</p>
+							<p className='mt-3 text-sm md:text-base text-zinc-500'>
+								{/* Konten Bantuan */}
 							</p>
-
 						</div>
 					</div>
 
-					<div className='flex flex-col h-full border-t '>
-						<div className='flex-grow px-7 border-r-2  border-pink-500'>
-							<p className='text-xl  text-pink-500'>Resources</p>
-							<p className='mt-3 text-zinc-500'>
-
+					<div className='mt-6 lg:mt-0 flex flex-col h-full border-t md:border-t-0'>
+						<div className='flex-grow px-0 md:px-7 border-r-0 lg:border-r-2 border-pink-500'>
+							<p className='text-lg md:text-xl text-pink-500'>Resources</p>
+							<p className='mt-3 text-sm md:text-base text-zinc-500'>
+								{/* Konten Resources */}
 							</p>
-
 						</div>
 					</div>
 
-					<div className='flex flex-col h-full border-t '>
-						<div className='flex-grow px-7 border-r-2  border-pink-500'>
-							<p className='text-xl  text-pink-500'>Ikuti Kami</p>
-							<p className='mt-3 text-zinc-500'>
-
+					<div className='mt-6 lg:mt-0 flex flex-col h-full border-t md:border-t-0'>
+						<div className='flex-grow px-0 md:px-7 border-r-0 lg:border-r-2 border-pink-500'>
+							<p className='text-lg md:text-xl text-pink-500'>Ikuti Kami</p>
+							<p className='mt-3 text-sm md:text-base text-zinc-500'>
+								{/* Konten Ikuti Kami */}
 							</p>
-
 						</div>
 					</div>
-
 				</div>
 			</div>
+
+
+			{/* idcon chat whatshapp */}
 		</div>
 	);
 };
