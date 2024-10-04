@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import GuestLayout from "@/layouts/guest";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
@@ -7,15 +7,26 @@ import {
 	CarouselContent,
 	CarouselItem,
 } from "@/components/ui/carousel";
-import { IconArrowDown, IconArrowRight, IconLayout2Filled } from "@tabler/icons-react";
+import { IconArrowDown, IconArrowRight, IconArrowUp, IconBrandWhatsapp, IconLayout2Filled } from "@tabler/icons-react";
 import MyImg from "../img/foto.png";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { motion } from "framer-motion"
 const WelcomePage = ({ }) => {
+	const [stiky, setStiky] = useState(false)
+
+	const changeHeader = () => {
+		if (window.scrollY >= 50) {
+			setStiky(true)
+		} else {
+			setStiky(false)
+		}
+	}
+
+	window.addEventListener('scroll', changeHeader)
 	return (
 		<div>
 			{/* Halaman bagian page atas */}
-			<div className="bg-slate-50 md:h-screen w-full">
+			<div id='home' className="bg-slate-50 md:h-screen w-full">
 				<motion.div
 					initial="hidden"
 					animate="show"
@@ -48,7 +59,7 @@ const WelcomePage = ({ }) => {
 										<p className="text-4xl md:text-6xl font-bold " style={{ color: "#6C4E31", maxWidth: "500px" }}>
 											Template Design Undangan
 										</p>
-										<p className="text-sm mt-4 " style={{color: "#6C4E31"}}>
+										<p className="text-sm mt-4 " style={{ color: "#6C4E31" }}>
 											Temukan keindahan desain undangan pernikahan impianmu.
 										</p>
 									</CardTitle>
@@ -76,8 +87,8 @@ const WelcomePage = ({ }) => {
 												<IconLayout2Filled />
 											</div>
 											<div>
-												<p className="text-xl md:text-3xl  text-zinc-600" style={{color: "#6C4E31"}}>Edit Sesukamu</p>
-												<p className="text-zinc-400" style={{color: "#6C4E31"}}>Unlimited Revisi</p>
+												<p className="text-xl md:text-3xl  text-zinc-600" style={{ color: "#6C4E31" }}>Edit Sesukamu</p>
+												<p className="text-zinc-400" style={{ color: "#6C4E31" }}>Unlimited Revisi</p>
 											</div>
 										</div>
 									</CardTitle>
@@ -97,8 +108,8 @@ const WelcomePage = ({ }) => {
 												<IconLayout2Filled />
 											</div>
 											<div>
-												<p className="text-xl md:text-3xl text-zinc-600" style={{color: "#6C4E31"}}>100+</p>
-												<p className="text-zinc-400" style={{color: "#6C4E31"}}>Tema Undangan</p>
+												<p className="text-xl md:text-3xl text-zinc-600" style={{ color: "#6C4E31" }}>100+</p>
+												<p className="text-zinc-400" style={{ color: "#6C4E31" }}>Tema Undangan</p>
 											</div>
 										</div>
 									</CardTitle>
@@ -276,18 +287,18 @@ const WelcomePage = ({ }) => {
 				<div className='grid grid-cols-1 md:grid-cols-2 p-8 md:p-16'>
 					<div className='flex flex-col h-full'>
 						<div className='flex-grow border-r-0 md:border-r-2 h-full border-pink-500'>
-							<p className='text-lg md:text-xl font-semibold'  style={{color: "#6C4E31"}}>Viding</p>
-							<p className='mt-3 text-sm md:text-base text-zinc-500'  style={{color: "#6C4E31"}}>
+							<p className='text-lg md:text-xl font-semibold' style={{ color: "#6C4E31" }}>Viding</p>
+							<p className='mt-3 text-sm md:text-base text-zinc-500' style={{ color: "#6C4E31" }}>
 								Viding adalah One Stop Platform Digitalisasi Pernikahan yang membuat pernikahan kamu menjadi lebih efisien, efektif, bermakna, dan Up to Date.
 							</p>
-							<p className='mt-3 text-sm md:text-base'  style={{color: "#6C4E31"}}>
+							<p className='mt-3 text-sm md:text-base' style={{ color: "#6C4E31" }}>
 								Terdaftar di Kementerian Komunikasi dan Informatika Republik Indonesia
 							</p>
 						</div>
 					</div>
 
 					<div className='mt-6 md:mt-0 px-8 md:px-12'>
-						<p className='text-lg md:text-xl font-semibold ' style={{color: "#6C4E31"}}>Metode Pembayaran</p>
+						<p className='text-lg md:text-xl font-semibold ' style={{ color: "#6C4E31" }}>Metode Pembayaran</p>
 					</div>
 				</div>
 
@@ -295,7 +306,7 @@ const WelcomePage = ({ }) => {
 				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-8 md:p-16'>
 					<div className='flex flex-col h-full'>
 						<div className='flex-grow border-r-0 lg:border-r-2 h-full border-pink-500'>
-							<p className='text-lg md:text-xl '  style={{color: "#6C4E31"}}>Produk</p>
+							<p className='text-lg md:text-xl ' style={{ color: "#6C4E31" }}>Produk</p>
 							<p className='mt-3 text-sm md:text-base text-zinc-500'>
 								{/* Konten Produk */}
 							</p>
@@ -304,7 +315,7 @@ const WelcomePage = ({ }) => {
 
 					<div className='mt-6 md:mt-0 flex flex-col h-full border-t md:border-t-0'>
 						<div className='flex-grow px-0 md:px-7 border-r-0 lg:border-r-2 border-pink-500'>
-							<p className='text-lg md:text-xl'  style={{color: "#6C4E31"}}>Bantuan</p>
+							<p className='text-lg md:text-xl' style={{ color: "#6C4E31" }}>Bantuan</p>
 							<p className='mt-3 text-sm md:text-base text-zinc-500'>
 								{/* Konten Bantuan */}
 							</p>
@@ -313,7 +324,7 @@ const WelcomePage = ({ }) => {
 
 					<div className='mt-6 lg:mt-0 flex flex-col h-full border-t md:border-t-0'>
 						<div className='flex-grow px-0 md:px-7 border-r-0 lg:border-r-2 border-pink-500'>
-							<p className='text-lg md:text-xl '  style={{color: "#6C4E31"}}>Resources</p>
+							<p className='text-lg md:text-xl ' style={{ color: "#6C4E31" }}>Resources</p>
 							<p className='mt-3 text-sm md:text-base text-zinc-500'>
 								{/* Konten Resources */}
 							</p>
@@ -322,7 +333,7 @@ const WelcomePage = ({ }) => {
 
 					<div className='mt-6 lg:mt-0 flex flex-col h-full border-t md:border-t-0'>
 						<div className='flex-grow px-0 md:px-7 border-r-0 lg:border-r-2 border-pink-500'>
-							<p className='text-lg md:text-xl '  style={{color: "#6C4E31"}}>Ikuti Kami</p>
+							<p className='text-lg md:text-xl ' style={{ color: "#6C4E31" }}>Ikuti Kami</p>
 							<p className='mt-3 text-sm md:text-base text-zinc-500'>
 								{/* Konten Ikuti Kami */}
 							</p>
@@ -331,8 +342,21 @@ const WelcomePage = ({ }) => {
 				</div>
 			</div>
 
+			{/* icon chat whatshapp */}
+			<div>
+				<a href="#home">
+					<div className={`hover:cursor-pointer fixed bottom-24 right-7 rounded-full p-1 transition-opacity duration-500 ${stiky ? 'opacity-100' : 'opacity-0'}`} style={{ background: "#EFC3AF", color: "#6C4E31" }}>
+						<IconArrowUp size={33} />
+					</div>
+				</a>
 
-			{/* idcon chat whatshapp */}
+				<a href="https://wa.me/085940466426">
+					<div className='flex items-center animate-pulse gap-2 fixed bottom-8 right-7 z-50 px-4 py-2 rounded-full hover:cursor-pointer' style={{ background: "#EFC3AF", color: "#6C4E31" }}>
+						<IconBrandWhatsapp size={35} strokeWidth={1.5} />
+						<p>Chat</p>
+					</div>
+				</a>
+			</div>
 		</div>
 	);
 };
