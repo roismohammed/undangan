@@ -44,10 +44,7 @@ const WelcomePage = ({ }) => {
 					className="flex flex-col md:w-full lg:flex-row p-4 lg:p-16 gap-6"
 				>
 					{/* Animasi untuk elemen pertama */}
-					<div
-
-						className="w-full md:w-8/12"
-					>
+					<div className="w-full md:w-8/12">
 						<motion.div variants={{
 							hidden: { opacity: 0, y: 50 },
 							show: { opacity: 1, y: 0 }
@@ -123,9 +120,10 @@ const WelcomePage = ({ }) => {
 						variants={{ hidden: { opacity: 0, y: 50 }, show: { opacity: 1, y: 0 } }}
 						className="w-full md:w-4/12"
 					>
-						<Card className="rounded-xl border  md:block border-pink-300 p-5 h-[550px] flex flex-col justify-between items-center" style={{ background: "#EFC3AF" }}>
-							<CardTitle>
-								<Carousel className="w-full h-auto mx-10">
+						<Card className="rounded-xl  border  md:block border-pink-300 p-2 h-[550px] flex flex-col justify-between items-center" style={{ background: "#EFC3AF" }}>
+							<CardContent>
+							<Carousel 
+								className="w-[300px] mt-10 h-[500px]-100 mx-[80px]">
 									<CarouselContent className="flex justify-center">
 										<CarouselItem className="pl-2 md:pl-4">
 											<img src={MyImg} alt="" className="w-[280px] rounded-md" />
@@ -138,8 +136,8 @@ const WelcomePage = ({ }) => {
 										</CarouselItem>
 									</CarouselContent>
 								</Carousel>
-							</CardTitle>
-							<Button className="rounded-full -mt- md:mt-0 bg-pink-100 flex gap-2 hover:bg-pink-200 text-pink-500" style={{ color: "#6C4E31" }}>
+							</CardContent>
+							<Button className="rounded-full mt-14 justify-center  bg-pink-100 flex gap-2 hover:bg-pink-200 text-pink-500" style={{ color: "#6C4E31" }}>
 								Lihat Detail <IconArrowRight size={18} />
 							</Button>
 						</Card>
@@ -270,12 +268,12 @@ const WelcomePage = ({ }) => {
 					</div>
 				</div>
 				<div className=' flex justify-center mt-6'>
-				<Button
-  style={{ borderColor: "#6C4E31" }}
-  className="rounded-full px-8 py-2 mt-3 border-2 hover:bg-slate-50 text-[#6C4E31] bg-transparent flex gap-2"
->
-  Lihat lebih banyak
-</Button>
+					<Button
+						style={{ borderColor: "#6C4E31" }}
+						className="rounded-full px-8 py-2 mt-3 border-2 hover:bg-slate-50 text-[#6C4E31] bg-transparent flex gap-2"
+					>
+						Lihat lebih banyak
+					</Button>
 
 				</div>
 			</div>
