@@ -191,7 +191,7 @@ const WelcomePage = ({ }) => {
 					</div>
 				</div>
 
-				<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mt-10">
+				<div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10 mt-10">
 					<div >
 						<Card className='rounded-xl'>
 							<img src={MyImg} alt="" className='rounded-xl' />
@@ -270,11 +270,12 @@ const WelcomePage = ({ }) => {
 					</div>
 				</div>
 				<div className=' flex justify-center mt-6'>
-					<Button
-						className="rounded-full px-8 py-2 mt-3 hover:bg-none text-pink-500 border border-pink-500 hover:bg-slate-50 bg-transparent flex gap-2"
-					>
-						Lihat lebih banyak
-					</Button>
+				<Button
+  style={{ borderColor: "#6C4E31" }}
+  className="rounded-full px-8 py-2 mt-3 border-2 hover:bg-slate-50 text-[#6C4E31] bg-transparent flex gap-2"
+>
+  Lihat lebih banyak
+</Button>
 
 				</div>
 			</div>
