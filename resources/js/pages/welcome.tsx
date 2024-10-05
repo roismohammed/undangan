@@ -26,7 +26,7 @@ const WelcomePage = ({ }) => {
 	return (
 		<div>
 			{/* Halaman bagian page atas */}
-			<div id='home' className="bg-slate-50 md:h-screen w-full">
+			<div id='home' className="bg-slate-50  lg:h-screen w-full">
 				<motion.div
 					initial="hidden"
 					animate="show"
@@ -41,7 +41,7 @@ const WelcomePage = ({ }) => {
 							}
 						}
 					}}
-					className="flex flex-col md:flex-row p-4 md:p-16 gap-6"
+					className="flex flex-col md:w-full lg:flex-row p-4 lg:p-16 gap-6"
 				>
 					{/* Animasi untuk elemen pertama */}
 					<div
@@ -53,7 +53,7 @@ const WelcomePage = ({ }) => {
 							show: { opacity: 1, y: 0 }
 						}}>
 
-							<Card className="rounded-xl border border-pink-200 shadow-none p-4 md:p-10" style={{ background: "#EFC3AF" }}>
+							<Card className="rounded-xl border border-pink-200 shadow-none p-4 md:w-full lg:w-full md:p-10" style={{ background: "#EFC3AF" }}>
 								<CardContent>
 									<CardTitle>
 										<p className="text-4xl md:text-6xl font-bold " style={{ color: "#6C4E31", maxWidth: "500px" }}>
@@ -71,7 +71,7 @@ const WelcomePage = ({ }) => {
 						</motion.div>
 
 						{/* Elemen berikutnya */}
-						<div className="flex flex-col md:flex-row gap-6 mt-6">
+						<div className="flex flex-col md:flex-row lg:flex-row gap-6 mt-6">
 							{/* Elemen "Edit Sesukamu" */}
 							<motion.div
 								variants={{
@@ -80,7 +80,7 @@ const WelcomePage = ({ }) => {
 								}}
 								className="w-full md:w-6/12"
 							>
-								<Card className="rounded-xl border-pink-200 shadow-none p-4 md:p-10" style={{ background: "#EFC3AF" }}>
+								<Card className="rounded-xl border-pink-200 md:w-8/12 shadow-none p-4 md:p-10" style={{ background: "#EFC3AF" }}>
 									<CardTitle>
 										<div className="flex gap-5">
 											<div className="bg-white p-3 rounded-xl items-center">
@@ -123,7 +123,7 @@ const WelcomePage = ({ }) => {
 						variants={{ hidden: { opacity: 0, y: 50 }, show: { opacity: 1, y: 0 } }}
 						className="w-full md:w-4/12"
 					>
-						<Card className="rounded-xl border border-pink-300 p-5 h-[550px] flex flex-col justify-between items-center" style={{ background: "#EFC3AF" }}>
+						<Card className="rounded-xl border  md:block border-pink-300 p-5 h-[550px] flex flex-col justify-between items-center" style={{ background: "#EFC3AF" }}>
 							<CardTitle>
 								<Carousel className="w-full h-auto mx-10">
 									<CarouselContent className="flex justify-center">
@@ -208,7 +208,7 @@ const WelcomePage = ({ }) => {
 						</div>
 						<Button
 							className="rounded-full w-full mt-3 text-white flex gap-2"
-							style={{ background: "#EB577B" }}
+							style={{ background: "#6C4E31" }}
 						>
 							Lihat Template
 						</Button>
@@ -227,7 +227,7 @@ const WelcomePage = ({ }) => {
 						</div>
 						<Button
 							className="rounded-full w-full mt-3 text-white flex gap-2"
-							style={{ background: "#EB577B" }}
+							style={{ background: "#6C4E31" }}
 						>
 							Lihat Template
 						</Button>
@@ -247,7 +247,7 @@ const WelcomePage = ({ }) => {
 						</div>
 						<Button
 							className="rounded-full w-full mt-3 text-white flex gap-2"
-							style={{ background: "#EB577B" }}
+							style={{ background: "#6C4E31" }}
 						>
 							Lihat Template
 						</Button>
@@ -265,7 +265,7 @@ const WelcomePage = ({ }) => {
 						</div>
 						<Button
 							className="rounded-full w-full mt-3 text-white flex gap-2"
-							style={{ background: "#EB577B" }}
+							style={{ background: "#6C4E31" }}
 						>
 							Lihat Template
 						</Button>

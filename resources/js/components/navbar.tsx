@@ -16,16 +16,16 @@ export default function Navbar() {
                 </a>
                 <div className="flex items-center lg:order-2">
                     <a
-                    style={{ background: "#F3CFDB",color: "#D1548E" }}
+                    style={{color: "#6C4E31" }}
                         href="#"
-                        className="text-gray-800 hidden md:block dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
+                        className="text-gray-800 hidden md:hidden lg:block dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none bg-white dark:focus:ring-gray-800"
                     >
                         Log in
                     </a>
                     <a
-                        style={{ background: "#D1548E" }}
+                        style={{ background: "#6C4E31" }}
                         href="#"
-                        className="text-white bg-primary-700 hidden md:block  hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-full text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
+                        className="text-white bg-primary-700 hidden md:hidden lg:block  hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-full text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
                     >
                         Get started
                     </a>
