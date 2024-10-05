@@ -147,7 +147,7 @@ const WelcomePage = ({ }) => {
 									<SelectValue placeholder="Kategori" />
 								</SelectTrigger>
 								<SelectContent>
-									<SelectItem>
+								<SelectItem value={''}>
 										{/* Kategori options here */}
 									</SelectItem>
 								</SelectContent>
@@ -160,7 +160,7 @@ const WelcomePage = ({ }) => {
 									<SelectValue placeholder="Warna" />
 								</SelectTrigger>
 								<SelectContent>
-									<SelectItem>
+								<SelectItem value={''}>
 										{/* Warna options here */}
 									</SelectItem>
 								</SelectContent>
@@ -174,7 +174,7 @@ const WelcomePage = ({ }) => {
 								<SelectValue placeholder="Urutkan" />
 							</SelectTrigger>
 							<SelectContent>
-								<SelectItem>
+								<SelectItem value={''}>
 									{/* Urutkan options here */}
 								</SelectItem>
 							</SelectContent>
