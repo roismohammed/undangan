@@ -80,7 +80,7 @@ const WelcomePage = ({ }) => {
 								}}
 								className="w-full md:w-6/12"
 							>
-								<Card className="rounded-xl border-pink-200 md:w-8/12 shadow-none p-4 md:p-10" style={{ background: "#EFC3AF" }}>
+								<Card className="rounded-xl border-pink-200 md:w-8/ shadow-none p-4 md:p-10" style={{ background: "#EFC3AF" }}>
 									<CardTitle>
 										<div className="flex gap-5">
 											<div className="bg-white p-3 rounded-xl items-center">
@@ -158,9 +158,9 @@ const WelcomePage = ({ }) => {
 									<SelectValue placeholder="Kategori" />
 								</SelectTrigger>
 								<SelectContent>
-									<SelectItem>
-										{/* Kategori options here */}
-									</SelectItem>
+									<SelectItem value="option1">Option 1</SelectItem>
+									<SelectItem value="option2">Option 2</SelectItem>
+
 								</SelectContent>
 							</Select>
 						</div>
@@ -171,9 +171,8 @@ const WelcomePage = ({ }) => {
 									<SelectValue placeholder="Warna" />
 								</SelectTrigger>
 								<SelectContent>
-									<SelectItem>
-										{/* Warna options here */}
-									</SelectItem>
+									<SelectItem value="option1">Option 1</SelectItem>
+									<SelectItem value="option2">Option 2</SelectItem>
 								</SelectContent>
 							</Select>
 						</div>
@@ -185,9 +184,8 @@ const WelcomePage = ({ }) => {
 								<SelectValue placeholder="Urutkan" />
 							</SelectTrigger>
 							<SelectContent>
-								<SelectItem>
-									{/* Urutkan options here */}
-								</SelectItem>
+								<SelectItem value="option1">Option 1</SelectItem>
+								<SelectItem value="option2">Option 2</SelectItem>
 							</SelectContent>
 						</Select>
 					</div>

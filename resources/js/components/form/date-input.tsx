@@ -168,7 +168,7 @@ const DateInput = forwardRef<HTMLInputElement, DateInputProps>(
               {date ? (
                 format(date, 'dd, LLLL yyyy', { locale: id })
               ) : (
-                <span>{date || props.placeholder}</span>
+                <span>{date ? format(date, 'dd, LLLL yyyy', { locale: id }) : props.placeholder}</span>
               )}
               <CalendarIcon className="mr-2 h-4 w-4" />
             </Button>
