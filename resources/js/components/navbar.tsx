@@ -8,111 +8,141 @@ export default function Header() {
     };
 
     return (
-        <header>
-            <nav style={{ background: "#EFC3AF" }} className="px-4 lg:px-6 py-4 dark:bg-gray-800">
-                <div className="flex justify-between items-center mx-auto">
-                    <a href="https://flowbite.com" className="flex items-center">
-                        <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-                            Viding
-                        </span>
+        <header style={{ background: "#EFC3AF" }}>
+            <nav
+                className="mx-auto flex items-center justify-between p-6 py-4"
+                aria-label="Global"
+            >
+                <div className="flex lg:flex-1">
+                    <a href="#" className="-m-1.5 p-1.5">
+                        <p className='text-xl'>Viding</p>
                     </a>
-                    <div className="flex items-center lg:order-2">
-                        <a
-                            style={{ color: "#6C4E31" }}
-                            href="#"
-                            className="text-gray-800 hidden md:hidden lg:block dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none bg-white dark:focus:ring-gray-800"
+                </div>
+                <div className="flex lg:hidden">
+                    <button
+                        type="button"
+                        className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                        onClick={toggleMenu}
+                    >
+                        <span className="sr-only">Open main menu</span>
+                        <svg
+                            className="h-6 w-6"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            strokeWidth="1.5"
+                            stroke="currentColor"
+                            aria-hidden="true"
                         >
-                            Log in
-                        </a>
-                        <a
-                            style={{ background: "#6C4E31" }}
-                            href="#"
-                            className="text-white bg-primary-700 hidden md:hidden lg:block hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-full text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
-                        >
-                            Get started
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                            />
+                        </svg>
+                    </button>
+                </div>
+                <div className="hidden lg:flex lg:gap-x-12">
+                    <a href="#" className="text-md leading-6 text-white">
+                        Home
+                    </a>
+                    <a href="#" className="text-md leading-6 text-gray-900">
+                        Features
+                    </a>
+                    <a href="#" className="text-md leading-6 text-gray-900">
+                        Marketplace
+                    </a>
+                    <a href="#" className="text-md leading-6 text-gray-900">
+                        Company
+                    </a>
+                </div>
+                <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-2">
+                    <a href="#" className="text-sm font-semibold leading-6 rounded-full px-4 py-2 bg-white" style={{ color: "#6C4E31" }}>
+                        Masuk
+                    </a>
+                    <a href="#" className="text-sm font-semibold leading-6 text-white rounded-full px-4 py-2" style={{ background: "#6C4E31" }}>
+                        Get Started
+                    </a>
+                </div>
+            </nav>
+            {/* Mobile menu with animation */}
+            <div
+                className={`lg:hidden fixed inset-0 z-10 transition-all duration-300 ease-in-out ${isOpen ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-full"
+                    }`}
+                role="dialog"
+                aria-modal="true"
+                style={{ background: "#EFC3AF" }}
+            >
+                <div className="fixed inset-0 z-10" />
+                <div className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                    <div className="flex items-center justify-between">
+                        <a href="#" className="-m-1.5 p-1.5">
+                            <p className='text-xl'>Viding</p>
                         </a>
                         <button
-                            onClick={toggleMenu}
                             type="button"
-                            className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                            aria-controls="mobile-menu-2"
-                            aria-expanded={isOpen ? "true" : "false"}
+                            className="-m-2.5 rounded-md p-2.5 text-gray-700"
+                            onClick={toggleMenu}
                         >
-                            <span className="sr-only">Open main menu</span>
+                            <span className="sr-only">Close menu</span>
                             <svg
-                                className="w-6 h-6"
-                                fill="currentColor"
-                                viewBox="0 0 20 20"
-                                xmlns="http://www.w3.org/2000/svg"
+                                className="h-6 w-6"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth="1.5"
+                                stroke="currentColor"
+                                aria-hidden="true"
                             >
                                 <path
-                                    fillRule="evenodd"
-                                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                                    clipRule="evenodd"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M6 18L18 6M6 6l12 12"
                                 />
                             </svg>
                         </button>
                     </div>
-                    <div
-                        className={`${
-                            isOpen ? "block" : "hidden"
-                        } justify-between items-center w-full lg:flex lg:w-auto lg:order-1`}
-                        id="mobile-menu-2"
-                    >
-                        <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-                            <li>
-                                <a
+                    <div className="mt-6 flow-root">
+                        <div className="-my-6 divide-y divide-gray-500/10">
+                            <div className="space-y-2 py-6">
+                            <a
                                     href="#"
-                                    className="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white"
-                                    aria-current="page"
+                                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                 >
                                     Home
                                 </a>
-                            </li>
-                            <li>
+
                                 <a
                                     href="#"
-                                    className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                                >
-                                    Company
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                                >
-                                    Marketplace
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                 >
                                     Features
                                 </a>
-                            </li>
-                            <li>
                                 <a
                                     href="#"
-                                    className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                 >
-                                    Team
+                                    Marketplace
                                 </a>
-                            </li>
-                            <li>
                                 <a
                                     href="#"
-                                    className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                 >
-                                    Contact
+                                    Company
                                 </a>
-                            </li>
-                        </ul>
+                            </div>
+                            <div className="py-6">
+                                <div className=' flex gap-2'>
+                                    <a href="#" className="text-sm font-semibold leading-6 rounded-full px-4 py-2 bg-white" style={{ color: "#6C4E31" }}>
+                                        Masuk
+                                    </a>
+                                    <a href="#" className="text-sm font-semibold leading-6 text-white rounded-full px-4 py-2" style={{ background: "#6C4E31" }}>
+                                        Get Started
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </nav>
+            </div>
         </header>
     );
 }
