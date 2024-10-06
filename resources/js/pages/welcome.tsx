@@ -122,8 +122,8 @@ const WelcomePage = ({ }) => {
 					>
 						<Card className="rounded-xl  border  md:block border-pink-300 p-2 h-[550px] flex flex-col justify-between items-center" style={{ background: "#EFC3AF" }}>
 							<CardContent>
-							<Carousel 
-								className="w-[300px] mt-10 h-[500px]-100 mx-[80px]">
+								<Carousel
+									className="w-[300px] mt-10 h-[500px]-100 mx-[80px]">
 									<CarouselContent className="flex justify-center">
 										<CarouselItem className="pl-2 md:pl-4">
 											<img src={MyImg} alt="" className="w-[280px] rounded-md" />
@@ -137,7 +137,7 @@ const WelcomePage = ({ }) => {
 									</CarouselContent>
 								</Carousel>
 							</CardContent>
-							<Button className="rounded-full mt-14 justify-center  bg-pink-100 flex gap-2 hover:bg-pink-200 text-pink-500" style={{ color: "#6C4E31" }}>
+							<Button className="rounded-full mt-6 lg:mt-14 justify-center  bg-pink-100 flex gap-2 hover:bg-pink-200 text-pink-500" style={{ color: "#6C4E31" }}>
 								Lihat Detail <IconArrowRight size={18} />
 							</Button>
 						</Card>
@@ -194,16 +194,16 @@ const WelcomePage = ({ }) => {
 						<Card className='rounded-xl'>
 							<img src={MyImg} alt="" className='rounded-xl' />
 						</Card>
-						<div className='flex justify-between mt-3'>
-							<p className='text-xl font-semibold'>160 - Belle</p>
+						<div className='md:flex lg:flex justify-between mt-3'>
+							<p className='md:text-xl lg:text-xl font-semibold'>160 - Belle</p>
 
-							<span>
+							<span >
 								<p>Rp. 100.000</p>
 							</span>
 
 						</div>
 						<Button
-							className="rounded-full w-full mt-3 text-white flex gap-2"
+							className="rounded-full h-7 md:h-9 w-full mt-1 md:mt-3 lg:mt-3 text-white flex gap-2"
 							style={{ background: "#6C4E31" }}
 						>
 							Lihat Template
@@ -213,16 +213,16 @@ const WelcomePage = ({ }) => {
 						<Card className='rounded-xl'>
 							<img src={MyImg} alt="" className='rounded-xl' />
 						</Card>
-						<div className='flex justify-between mt-3'>
-							<p className='text-xl font-semibold'>160 - Belle</p>
+						<div className='md:flex lg:flex justify-between mt-3'>
+							<p className='md:text-xl lg:text-xl font-semibold'>160 - Belle</p>
 
-							<span>
+							<span >
 								<p>Rp. 100.000</p>
 							</span>
 
 						</div>
 						<Button
-							className="rounded-full w-full mt-3 text-white flex gap-2"
+							className="rounded-full h-7 md:h-9 w-full mt-1 md:mt-3 lg:mt-3 text-white flex gap-2"
 							style={{ background: "#6C4E31" }}
 						>
 							Lihat Template
@@ -233,16 +233,16 @@ const WelcomePage = ({ }) => {
 						<Card className='rounded-xl '>
 							<img src={MyImg} alt="" className='rounded-xl' />
 						</Card>
-						<div className='flex justify-between mt-3'>
-							<p className='text-xl font-semibold'>160 - Belle</p>
+						<div className='md:flex lg:flex justify-between mt-3'>
+							<p className='md:text-xl lg:text-xl font-semibold'>160 - Belle</p>
 
-							<span>
+							<span >
 								<p>Rp. 100.000</p>
 							</span>
 
 						</div>
 						<Button
-							className="rounded-full w-full mt-3 text-white flex gap-2"
+							className="rounded-full h-7 md:h-9 w-full mt-1 md:mt-3 lg:mt-3 text-white flex gap-2"
 							style={{ background: "#6C4E31" }}
 						>
 							Lihat Template
@@ -251,16 +251,16 @@ const WelcomePage = ({ }) => {
 						<Card className='rounded-xl'>
 							<img src={MyImg} alt="" className='rounded-xl' />
 						</Card>
-						<div className='flex justify-between mt-3'>
-							<p className='text-xl font-semibold'>160 - Belle</p>
+						<div className='md:flex lg:flex justify-between mt-3'>
+							<p className='md:text-xl lg:text-xl font-semibold'>160 - Belle</p>
 
-							<span>
+							<span >
 								<p>Rp. 100.000</p>
 							</span>
 
 						</div>
 						<Button
-							className="rounded-full w-full mt-3 text-white flex gap-2"
+							className="rounded-full h-7 md:h-9 w-full mt-1 md:mt-3 lg:mt-3 text-white flex gap-2"
 							style={{ background: "#6C4E31" }}
 						>
 							Lihat Template
