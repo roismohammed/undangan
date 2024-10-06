@@ -25,6 +25,7 @@ const WelcomePage = ({ }) => {
 	};
 
 
+
 	const handleScrollToTemplate = () => {
 		cardTemplateRef.current.scrollIntoView({ behavior: 'smooth' });
 	};
@@ -171,7 +172,7 @@ const WelcomePage = ({ }) => {
 
 						{/* Warna Select */}
 						<Select>
-							<SelectTrigger className="w-full md:w-[290px] rounded-xl h-16">
+							<SelectTrigger  className="w-full md:w-[290px] focus-visible:ring-0 focus:ring-pink-400 rounded-xl h-16">
 								<SelectValue placeholder="Warna" />
 							</SelectTrigger>
 							<SelectContent>
@@ -184,7 +185,7 @@ const WelcomePage = ({ }) => {
 					{/* Urutkan Select */}
 					<div className="mt- md:mt-0 w-full md:w-auto">
 						<Select>
-							<SelectTrigger className="w-full md:w-[290px] rounded-xl h-16">
+							<SelectTrigger  className="w-full md:w-[290px] focus-visible:ring-0 focus:ring-pink-400 rounded-xl h-16">
 								<SelectValue placeholder="Urutkan" />
 							</SelectTrigger>
 							<SelectContent>
