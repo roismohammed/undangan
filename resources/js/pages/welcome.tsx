@@ -15,12 +15,22 @@ import img1 from '../img/bca.png'
 import img2 from '../img/mandiri.png'
 const WelcomePage = ({ }) => {
 	const [stiky, setStiky] = useState(false);
+	const [iconWa, setIconWa] = useState(false);
 	const cardTemplateRef = useRef(null);
+	const cardAtas = useRef(null);
 	const changeHeader = () => {
 		if (window.scrollY >= 50) {
 			setStiky(true);
 		} else {
 			setStiky(false);
+		}
+	};
+
+	const changeIcon = () => {
+		if (window.scrollY >= 50) {
+			setIconWa(true);
+		} else {
+			setIconWa(false);
 		}
 	};
 
@@ -30,11 +40,16 @@ const WelcomePage = ({ }) => {
 		cardTemplateRef.current.scrollIntoView({ behavior: 'smooth' });
 	};
 
+	const halamanAtas = () => {
+		cardAtas.current.scrollIntoView({ behavior: 'smooth' });
+	};
+
 	window.addEventListener('scroll', changeHeader);
+	window.addEventListener('scroll', changeIcon);
 	return (
 		<div>
 			{/* Halaman bagian page atas */}
-			<div ref={cardTemplateRef} className="bg-slate-50  lg:h-screen w-full">
+			<div ref={cardAtas} className="bg-slate-50  lg:h-screen w-full">
 				<motion.div
 					initial="hidden"
 					animate="show"
@@ -318,14 +333,14 @@ const WelcomePage = ({ }) => {
 
 			{/* icon chat whatshapp */}
 			<div>
-				<span   onClick={handleScrollToTemplate}>
-					<div className={`hover:cursor-pointer fixed bottom-24 right-7 rounded-full p-1 transition-opacity duration-500 ${stiky ? 'opacity-100' : 'opacity-0'}`} style={{ background: "#EFC3AF", color: "#6C4E31" }}>
+				<span   onClick={halamanAtas}>
+					<div className={`hover:cursor-pointer text-white fixed bottom-24 right-7 rounded-full p-1 transition-opacity duration-500 ${stiky ? 'opacity-100' : 'opacity-0'}`} style={{ background: "#6C4E31" }}>
 						<IconArrowUp size={33} />
 					</div>
 				</span>
-
+				{/* style={{ background: "#6C4E31" }} */}
 				<a href="https://wa.me/085940466426">
-					<div className='flex items-center animate-pulse gap-2 fixed bottom-8 right-7 z-50 px-4 py-2 rounded-full hover:cursor-pointer' style={{ background: "#EFC3AF", color: "#6C4E31" }}>
+					<div className={iconWa ? 'hidden transition-opacity duration-500 opacity-100':'transition-opacity text-white duration-800 flex items-center animate-pulse gap-2 fixed bottom-8 right-7 z-50 px-4 py-2 rounded-full hover:cursor-pointer'} style={{ background: "#6C4E31" }}>
 						<IconBrandWhatsapp size={35} strokeWidth={1.5} />
 						<p>Chat</p>
 					</div>
