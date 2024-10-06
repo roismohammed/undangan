@@ -131,7 +131,7 @@ const WelcomePage = ({ }) => {
 						<Card className="rounded-xl  border  md:block p-2 h-[550px] flex flex-col justify-between items-center" style={{ background: "#EFC3AF" }}>
 							<CardContent>
 								<Carousel
-									className="w-[300px] mt-10 h-[500px]-100 mx-[100px]">
+									className="w-[300px] rounded-md mt-10 h-[500px]-100 lg:mx-[50px] md:mx-[50px] mx-[0px]">
 									<CarouselContent className="flex justify-center">
 										<CarouselItem className="pl-2 md:pl-4">
 											<img src={MyImg} alt="" className="w-[280px] rounded-md" />
@@ -161,7 +161,7 @@ const WelcomePage = ({ }) => {
 					<div className="flex flex-col md:flex-row gap-4 w-full md:w-auto">
 						{/* Kategori Select */}
 						<Select>
-							<SelectTrigger className="w-full md:w-[290px] focus-visible:ring-0 focus:ring-pink-400 rounded-xl h-16">
+							<SelectTrigger className="w-full md:w-[290px] focus-visible:ring-0 focus:ring-0 rounded-xl h-16">
 								<SelectValue placeholder="Kategori" />
 							</SelectTrigger>
 							<SelectContent>
@@ -172,7 +172,7 @@ const WelcomePage = ({ }) => {
 
 						{/* Warna Select */}
 						<Select>
-							<SelectTrigger  className="w-full md:w-[290px] focus-visible:ring-0 focus:ring-pink-400 rounded-xl h-16">
+							<SelectTrigger  className="w-full md:w-[290px] focus-visible:ring-0 focus:ring-0 rounded-xl h-16">
 								<SelectValue placeholder="Warna" />
 							</SelectTrigger>
 							<SelectContent>
@@ -185,7 +185,7 @@ const WelcomePage = ({ }) => {
 					{/* Urutkan Select */}
 					<div className="mt- md:mt-0 w-full md:w-auto">
 						<Select>
-							<SelectTrigger  className="w-full md:w-[290px] focus-visible:ring-0 focus:ring-pink-400 rounded-xl h-16">
+							<SelectTrigger className="w-full md:w-[290px] focus-visible:ring-0 focus:ring-0 rounded-xl h-16">
 								<SelectValue placeholder="Urutkan" />
 							</SelectTrigger>
 							<SelectContent>
