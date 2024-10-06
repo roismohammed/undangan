@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import GuestLayout from "@/layouts/guest";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
@@ -14,17 +14,21 @@ import { motion } from "framer-motion"
 import img1 from '../img/bca.png'
 import img2 from '../img/mandiri.png'
 const WelcomePage = ({ }) => {
-	const [stiky, setStiky] = useState(false)
-
+	const [stiky, setStiky] = useState(false);
+	const cardTemplateRef = useRef(null); 
 	const changeHeader = () => {
-		if (window.scrollY >= 50) {
-			setStiky(true)
-		} else {
-			setStiky(false)
-		}
-	}
-
-	window.addEventListener('scroll', changeHeader)
+	  if (window.scrollY >= 50) {
+		setStiky(true);
+	  } else {
+		setStiky(false);
+	  }
+	};
+  
+	const handleScrollToTemplate = () => {
+	  cardTemplateRef.current.scrollIntoView({ behavior: 'smooth' }); 
+	};
+  
+	window.addEventListener('scroll', changeHeader);
 	return (
 		<div>
 			{/* Halaman bagian page atas */}
@@ -52,7 +56,7 @@ const WelcomePage = ({ }) => {
 							show: { opacity: 1, y: 0 }
 						}}>
 
-							<Card className="rounded-xl border border-pink-200 shadow-none p-4 md:w-full lg:w-full md:p-10" style={{ background: "#EFC3AF" }}>
+							<Card className="rounded-xl border shadow-none p-4 md:w-full lg:w-full md:p-10" style={{ background: "#EFC3AF" }}>
 								<CardContent>
 									<CardTitle>
 										<p className="text-4xl md:text-6xl font-bold " style={{ color: "#6C4E31", maxWidth: "500px" }}>
@@ -62,7 +66,7 @@ const WelcomePage = ({ }) => {
 											Temukan keindahan desain undangan pernikahan impianmu.
 										</p>
 									</CardTitle>
-									<Button className="rounded-full mt-4 md:mt-24 text-white flex gap-2" style={{ background: "#6C4E31" }}>
+									<Button className="rounded-full mt-4 md:mt-24 text-white flex gap-2" style={{ background: "#6C4E31" }} onClick={handleScrollToTemplate}>
 										Jelajahi Template <IconArrowDown size={18} />
 									</Button>
 								</CardContent>
@@ -79,7 +83,7 @@ const WelcomePage = ({ }) => {
 								}}
 								className="w-full md:w-6/12"
 							>
-								<Card className="rounded-xl border-pink-200 md:w-8/ shadow-none p-4 md:p-10" style={{ background: "#EFC3AF" }}>
+								<Card className="rounded-xl  md:w-8/ shadow-none p-4 md:p-10" style={{ background: "#EFC3AF" }}>
 									<CardTitle>
 										<div className="flex gap-5">
 											<div className="bg-white p-3 rounded-xl items-center">
@@ -122,10 +126,10 @@ const WelcomePage = ({ }) => {
 						variants={{ hidden: { opacity: 0, y: 50 }, show: { opacity: 1, y: 0 } }}
 						className="w-full md:w-4/12 -mt-3 lg:mt-0 md:mt-6"
 					>
-						<Card className="rounded-xl  border  md:block border-pink-300 p-2 h-[550px] flex flex-col justify-between items-center" style={{ background: "#EFC3AF" }}>
+						<Card className="rounded-xl  border  md:block p-2 h-[550px] flex flex-col justify-between items-center" style={{ background: "#EFC3AF" }}>
 							<CardContent>
 								<Carousel
-									className="w-[300px] mt-10 h-[500px]-100 mx-[80px]">
+									className="w-[300px] mt-10 h-[500px]-100 mx-[100px]">
 									<CarouselContent className="flex justify-center">
 										<CarouselItem className="pl-2 md:pl-4">
 											<img src={MyImg} alt="" className="w-[280px] rounded-md" />
@@ -139,7 +143,7 @@ const WelcomePage = ({ }) => {
 									</CarouselContent>
 								</Carousel>
 							</CardContent>
-							<Button className="rounded-full mt-4 md:mt-24 lg:mt-6 text-white flex gap-2" style={{ background: "#6C4E31" }}>
+							<Button className="rounded-full mb-8 md:mt-24 lg:mt-6 text-white flex gap-2" style={{ background: "#6C4E31" }}>
 								Lihat Detail <IconArrowRight size={18} />
 							</Button>
 						</Card>
@@ -149,7 +153,7 @@ const WelcomePage = ({ }) => {
 			</div>
 
 			{/* bagian card template */}
-			<div className='md:p-16 p-4 '>
+			<div className='md:p-16 p-4 'ref={cardTemplateRef} >
 				<div className="flex flex-col md:flex-row justify-between gap-6">
 					<div className="flex gap-4">
 						<div>
