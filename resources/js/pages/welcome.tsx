@@ -11,6 +11,8 @@ import { IconArrowDown, IconArrowRight, IconArrowUp, IconBrandWhatsapp, IconLayo
 import MyImg from "../img/foto.png";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { motion } from "framer-motion"
+import img1 from '../img/bca.png'
+import img2 from '../img/mandiri.png'
 const WelcomePage = ({ }) => {
 	const [stiky, setStiky] = useState(false)
 
@@ -68,7 +70,7 @@ const WelcomePage = ({ }) => {
 						</motion.div>
 
 						{/* Elemen berikutnya */}
-						<div className="flex flex-col md:flex-row lg:flex-row gap-6 mt-6">
+						<div className="flex flex-col md:flex-row lg:flex-row gap-6 mt-3 lg:mt-6 md:mt-6">
 							{/* Elemen "Edit Sesukamu" */}
 							<motion.div
 								variants={{
@@ -96,7 +98,7 @@ const WelcomePage = ({ }) => {
 							<motion.div
 								variants={{ hidden: { opacity: 0, y: 50 }, show: { opacity: 1, y: 0 } }}
 								transition={{ duration: 0.5 }} // Transisi sedikit lebih lambat
-								className="w-full md:w-6/12"
+								className="w-full md:w-6/12 -mt-3 lg:mt-0 md:mt-0"
 							>
 								<Card className="rounded-xl border border-pink-200 shadow-none  p-4 md:p-10" style={{ background: "#EFC3AF" }}>
 									<CardTitle>
@@ -118,7 +120,7 @@ const WelcomePage = ({ }) => {
 					{/* Elemen Carousel di sebelah kanan */}
 					<motion.div
 						variants={{ hidden: { opacity: 0, y: 50 }, show: { opacity: 1, y: 0 } }}
-						className="w-full md:w-4/12"
+						className="w-full md:w-4/12 -mt-3 lg:mt-0 md:mt-6"
 					>
 						<Card className="rounded-xl  border  md:block border-pink-300 p-2 h-[550px] flex flex-col justify-between items-center" style={{ background: "#EFC3AF" }}>
 							<CardContent>
@@ -137,7 +139,7 @@ const WelcomePage = ({ }) => {
 									</CarouselContent>
 								</Carousel>
 							</CardContent>
-							<Button className="rounded-full mt-6 lg:mt-14 justify-center  bg-pink-100 flex gap-2 hover:bg-pink-200 text-pink-500" style={{ color: "#6C4E31" }}>
+							<Button className="rounded-full mt-4 md:mt-24 lg:mt-6 text-white flex gap-2" style={{ background: "#6C4E31" }}>
 								Lihat Detail <IconArrowRight size={18} />
 							</Button>
 						</Card>
@@ -294,49 +296,18 @@ const WelcomePage = ({ }) => {
 						</div>
 					</div>
 
-					<div className='mt-6 md:mt-0 px-8 md:px-12'>
+					<div className='mt-6 md:mt-0  md:px-12'>
 						<p className='text-lg md:text-xl font-semibold ' style={{ color: "#6C4E31" }}>Metode Pembayaran</p>
+
+						<div className='flex gap-2'>
+							<img src={img1} className='w-[150px] h-[60px] bg-white px-6 rounded-md' />
+							<img src={img2} className='w-[150px] h-[60px] bg-white px-6 rounded-md' />
+						</div>
 					</div>
 				</div>
 
 				{/* Section kedua */}
-				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-8 md:p-16'>
-					<div className='flex flex-col h-full'>
-						<div className='flex-grow border-r-0 lg:border-r-2 h-full border-pink-500'>
-							<p className='text-lg md:text-xl ' style={{ color: "#6C4E31" }}>Produk</p>
-							<p className='mt-3 text-sm md:text-base text-zinc-500'>
-								{/* Konten Produk */}
-							</p>
-						</div>
-					</div>
 
-					<div className='mt-6 md:mt-0 flex flex-col h-full border-t md:border-t-0'>
-						<div className='flex-grow px-0 md:px-7 border-r-0 lg:border-r-2 border-pink-500'>
-							<p className='text-lg md:text-xl' style={{ color: "#6C4E31" }}>Bantuan</p>
-							<p className='mt-3 text-sm md:text-base text-zinc-500'>
-								{/* Konten Bantuan */}
-							</p>
-						</div>
-					</div>
-
-					<div className='mt-6 lg:mt-0 flex flex-col h-full border-t md:border-t-0'>
-						<div className='flex-grow px-0 md:px-7 border-r-0 lg:border-r-2 border-pink-500'>
-							<p className='text-lg md:text-xl ' style={{ color: "#6C4E31" }}>Resources</p>
-							<p className='mt-3 text-sm md:text-base text-zinc-500'>
-								{/* Konten Resources */}
-							</p>
-						</div>
-					</div>
-
-					<div className='mt-6 lg:mt-0 flex flex-col h-full border-t md:border-t-0'>
-						<div className='flex-grow px-0 md:px-7 border-r-0 lg:border-r-2 border-pink-500'>
-							<p className='text-lg md:text-xl ' style={{ color: "#6C4E31" }}>Ikuti Kami</p>
-							<p className='mt-3 text-sm md:text-base text-zinc-500'>
-								{/* Konten Ikuti Kami */}
-							</p>
-						</div>
-					</div>
-				</div>
 			</div>
 
 			{/* icon chat whatshapp */}
