@@ -15,24 +15,25 @@ import img1 from '../img/bca.png'
 import img2 from '../img/mandiri.png'
 const WelcomePage = ({ }) => {
 	const [stiky, setStiky] = useState(false);
-	const cardTemplateRef = useRef(null); 
+	const cardTemplateRef = useRef(null);
 	const changeHeader = () => {
-	  if (window.scrollY >= 50) {
-		setStiky(true);
-	  } else {
-		setStiky(false);
-	  }
+		if (window.scrollY >= 50) {
+			setStiky(true);
+		} else {
+			setStiky(false);
+		}
 	};
-  
+
+
 	const handleScrollToTemplate = () => {
-	  cardTemplateRef.current.scrollIntoView({ behavior: 'smooth' }); 
+		cardTemplateRef.current.scrollIntoView({ behavior: 'smooth' });
 	};
-  
+
 	window.addEventListener('scroll', changeHeader);
 	return (
 		<div>
 			{/* Halaman bagian page atas */}
-			<div id='home' className="bg-slate-50  lg:h-screen w-full">
+			<div ref={cardTemplateRef} className="bg-slate-50  lg:h-screen w-full">
 				<motion.div
 					initial="hidden"
 					animate="show"
@@ -153,38 +154,37 @@ const WelcomePage = ({ }) => {
 			</div>
 
 			{/* bagian card template */}
-			<div className='md:p-16 p-4 'ref={cardTemplateRef} >
-				<div className="flex flex-col md:flex-row justify-between gap-6">
-					<div className="flex gap-4">
-						<div>
-							<Select>
-								<SelectTrigger className="w-[155px] md:w-[290px] focus-visible:ring-0 focus:ring-pink-400 rounded-xl h-16">
-									<SelectValue placeholder="Kategori" />
-								</SelectTrigger>
-								<SelectContent>
-									<SelectItem value="option1">Option 1</SelectItem>
-									<SelectItem value="option2">Option 2</SelectItem>
+			<div className='md:p-16 p-4 ' ref={cardTemplateRef} >
+				<div className="flex flex-col md:flex-row justify-between gap-4 md:gap-6">
+					{/* Dropdown Selects for Category and Color */}
+					<div className="flex flex-col md:flex-row gap-4 w-full md:w-auto">
+						{/* Kategori Select */}
+						<Select>
+							<SelectTrigger className="w-full md:w-[290px] focus-visible:ring-0 focus:ring-pink-400 rounded-xl h-16">
+								<SelectValue placeholder="Kategori" />
+							</SelectTrigger>
+							<SelectContent>
+								<SelectItem value="option1">Option 1</SelectItem>
+								<SelectItem value="option2">Option 2</SelectItem>
+							</SelectContent>
+						</Select>
 
-								</SelectContent>
-							</Select>
-						</div>
-
-						<div>
-							<Select>
-								<SelectTrigger className="w-[155px] md:mt-0 md:w-[290px] rounded-xl h-16">
-									<SelectValue placeholder="Warna" />
-								</SelectTrigger>
-								<SelectContent>
-									<SelectItem value="option1">Option 1</SelectItem>
-									<SelectItem value="option2">Option 2</SelectItem>
-								</SelectContent>
-							</Select>
-						</div>
+						{/* Warna Select */}
+						<Select>
+							<SelectTrigger className="w-full md:w-[290px] rounded-xl h-16">
+								<SelectValue placeholder="Warna" />
+							</SelectTrigger>
+							<SelectContent>
+								<SelectItem value="option1">Option 1</SelectItem>
+								<SelectItem value="option2">Option 2</SelectItem>
+							</SelectContent>
+						</Select>
 					</div>
 
-					<div className="mt-4 md:mt-0">
+					{/* Urutkan Select */}
+					<div className="mt- md:mt-0 w-full md:w-auto">
 						<Select>
-							<SelectTrigger className="md:mt-0 -mt-8 md:w-[290px] rounded-xl h-16">
+							<SelectTrigger className="w-full md:w-[290px] rounded-xl h-16">
 								<SelectValue placeholder="Urutkan" />
 							</SelectTrigger>
 							<SelectContent>
@@ -194,6 +194,7 @@ const WelcomePage = ({ }) => {
 						</Select>
 					</div>
 				</div>
+
 
 				<div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10 mt-10">
 					<div >
@@ -316,11 +317,11 @@ const WelcomePage = ({ }) => {
 
 			{/* icon chat whatshapp */}
 			<div>
-				<a href="#home">
+				<span   onClick={handleScrollToTemplate}>
 					<div className={`hover:cursor-pointer fixed bottom-24 right-7 rounded-full p-1 transition-opacity duration-500 ${stiky ? 'opacity-100' : 'opacity-0'}`} style={{ background: "#EFC3AF", color: "#6C4E31" }}>
 						<IconArrowUp size={33} />
 					</div>
-				</a>
+				</span>
 
 				<a href="https://wa.me/085940466426">
 					<div className='flex items-center animate-pulse gap-2 fixed bottom-8 right-7 z-50 px-4 py-2 rounded-full hover:cursor-pointer' style={{ background: "#EFC3AF", color: "#6C4E31" }}>
