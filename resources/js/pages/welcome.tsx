@@ -143,11 +143,12 @@ const WelcomePage = ({ }) => {
 						variants={{ hidden: { opacity: 0, y: 50 }, show: { opacity: 1, y: 0 } }}
 						className="w-full md:w-4/12 -mt-3 lg:mt-0 md:mt-6"
 					>
-						<Card className="rounded-xl  border  md:block p-2 h-[550px] flex flex-col justify-between items-center" style={{ background: "#EFC3AF" }}>
+						<Card className="rounded-xl border md:block p-2 h-[550px] flex flex-col justify-between items-center" style={{ background: "#EFC3AF" }}>
 							<CardContent>
 								<Carousel
-									className="w-[300px] rounded-md mt-10 h-[500px]-100 lg:mx-[50px] md:mx-[50px] mx-[0px]">
-									<CarouselContent className="flex justify-center ">
+									className="w-[300px] rounded-md mt-10 h-[500px]-100 lg:mx-[50px] md:mx-[50px] mx-[0px]"
+								>
+									<CarouselContent className="flex justify-center">
 										<CarouselItem className="pl-2 md:pl-4 mx-5 md:mx-0 lg:mx-0">
 											<img src={MyImg} alt="" className="w-[280px] rounded-md" />
 										</CarouselItem>
@@ -160,10 +161,15 @@ const WelcomePage = ({ }) => {
 									</CarouselContent>
 								</Carousel>
 							</CardContent>
-							<Button className="rounded-full mb-8 md:mt-24 lg:mt-6 text-white flex gap-2" style={{ background: "#6C4E31" }}>
-								Lihat Detail <IconArrowRight size={18} />
-							</Button>
+
+							{/* Button container */}
+							<div className="flex justify-center w-full mb-6">
+								<Button className="rounded-full text-white flex gap-2" style={{ background: "#6C4E31" }}>
+									Lihat Detail <IconArrowRight size={18} />
+								</Button>
+							</div>
 						</Card>
+
 					</motion.div>
 				</motion.div>
 
@@ -187,7 +193,7 @@ const WelcomePage = ({ }) => {
 
 						{/* Warna Select */}
 						<Select>
-							<SelectTrigger  className="w-full md:w-[290px] focus-visible:ring-0 focus:ring-0 rounded-xl h-16">
+							<SelectTrigger className="w-full md:w-[290px] focus-visible:ring-0 focus:ring-0 rounded-xl h-16">
 								<SelectValue placeholder="Warna" />
 							</SelectTrigger>
 							<SelectContent>
@@ -333,14 +339,14 @@ const WelcomePage = ({ }) => {
 
 			{/* icon chat whatshapp */}
 			<div>
-				<span   onClick={halamanAtas}>
+				<span onClick={halamanAtas}>
 					<div className={`hover:cursor-pointer text-white fixed bottom-24 right-7 rounded-full p-1 transition-opacity duration-500 ${stiky ? 'opacity-100' : 'opacity-0'}`} style={{ background: "#6C4E31" }}>
 						<IconArrowUp size={33} />
 					</div>
 				</span>
 				{/* style={{ background: "#6C4E31" }} */}
 				<a href="https://wa.me/085940466426">
-					<div className={iconWa ? 'hidden transition-opacity duration-500 opacity-100':'transition-opacity text-white duration-800 flex items-center animate-pulse gap-2 fixed bottom-8 right-7 z-50 px-4 py-2 rounded-full hover:cursor-pointer'} style={{ background: "#6C4E31" }}>
+					<div className={iconWa ? 'hidden transition-opacity duration-500 opacity-100' : 'transition-opacity text-white duration-800 flex items-center animate-pulse gap-2 fixed bottom-8 right-7 z-50 px-4 py-2 rounded-full hover:cursor-pointer'} style={{ background: "#6C4E31" }}>
 						<IconBrandWhatsapp size={35} strokeWidth={1.5} />
 						<p>Chat</p>
 					</div>
