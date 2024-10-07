@@ -148,7 +148,7 @@ const WelcomePage = ({ }) => {
 								<Carousel
 									className="w-[300px] rounded-md mt-10 h-[500px]-100 lg:mx-[50px] md:mx-[50px] mx-[0px]">
 									<CarouselContent className="flex justify-center ">
-										<CarouselItem className="pl-2 md:pl-4 mx-6 md:mx-0 lg:mx-0">
+										<CarouselItem className="pl-2 md:pl-4 mx-5 md:mx-0 lg:mx-0">
 											<img src={MyImg} alt="" className="w-[280px] rounded-md" />
 										</CarouselItem>
 										<CarouselItem className="pl-2 md:pl-4">
