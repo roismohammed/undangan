@@ -312,7 +312,7 @@ const WelcomePage = ({ }) => {
 				{/* Section pertama */}
 				<div className='grid grid-cols-1 md:grid-cols-2 p-8 md:p-16'>
 					<div className='flex flex-col h-full'>
-						<div className='flex-grow border-r-0 md:border-r-2 h-full border-pink-500'>
+						<div className='flex-grow border-r-0 md:border-r-2 h-full'>
 							<p className='text-lg md:text-xl font-semibold' style={{ color: "#6C4E31" }}>Viding</p>
 							<p className='mt-3 text-sm md:text-base text-zinc-500' style={{ color: "#6C4E31" }}>
 								Viding adalah One Stop Platform Digitalisasi Pernikahan yang membuat pernikahan kamu menjadi lebih efisien, efektif, bermakna, dan Up to Date.
