@@ -18,6 +18,7 @@ const WelcomePage = ({ }) => {
 	const [iconWa, setIconWa] = useState(false);
 	const cardTemplateRef = useRef(null);
 	const cardAtas = useRef(null);
+
 	const changeHeader = () => {
 		if (window.scrollY >= 50) {
 			setStiky(true);
