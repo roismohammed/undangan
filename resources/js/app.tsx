@@ -11,7 +11,7 @@ const appName = import.meta.env.VITE_APP_NAME || 'Laravel'
 createInertiaApp({
 	title: title => `${title} - ${appName}`,
 	resolve: async name => {
-		const pages = await import.meta.glob('./pages/**/*.tsx', {eager: true})
+		const pages = await import.meta.glob('./pages/**/*.tsx', {eager: false})
 		let page: any = await pages[`./pages/${name}.tsx`]
 		page.default.layout = await page.default.layout || ((page: React.ReactNode) =>
 			<Authenticated children={page} />)
